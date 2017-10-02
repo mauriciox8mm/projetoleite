@@ -26,13 +26,7 @@ import net.sf.jasperreports.engine.JasperPrint;
  */
 public class ChamaRelatorio {
 
-	/**
-	 * Colocar os relatórios dentro de uma pasta chamada relatorio, dentro do
-	 * WEB-INF. O caminhoRelatorio é o seu nome e a extensão. O param é o
-	 * parâmetro, do tipo HashMap. O nomeRelatorio é o nome do relatório que
-	 * será gerado, o que o usuário irá ver.
-	 *
-	 */
+
 	public static void imprimeRelatorio(String caminhoRelatorio, HashMap param, String nomeRelatorio){
 
 		Connection con = Banco.getInstancia().getConnection();

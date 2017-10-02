@@ -14,7 +14,7 @@ import entidades.Raca;
 import entidades.Remedios;
 //import entidades.Tipo;
 import entidades.Vacinacao;
-import util.EnviaEmail;
+
 
 import java.io.IOException;
 import java.util.ArrayList;

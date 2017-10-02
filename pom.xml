@@ -5,7 +5,26 @@
 	<artifactId>Tcc</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>war</packaging>
+	 <profiles>
+    <profile>
+        <id>openshift</id>
+        <build>
+            <finalName>projeto</finalName>
+            <plugins>
+                <plugin>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <version>2.4</version>
+                    <configuration>
+                        <outputDirectory>webapps</outputDirectory>
+                        <warName>ROOT</warName>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </build>
+    </profile>
+    </profiles>
 	<repositories>
+	
 		<repository>
 			<id>prime-repo</id>
 			<name>PrimeFaces Maven Repository</name>
@@ -77,7 +96,11 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.6</version>
 		</dependency>
-
+<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-email</artifactId>
+			<version>1.2</version>
+		</dependency>
 		<dependency>
 			<groupId>org.glassfish.jersey.ext</groupId>
 			<artifactId>jersey-mvc-jsp</artifactId>
@@ -137,7 +160,11 @@
 			<version>3.0.4.RELEASE</version>
 		</dependency>
 		<!-- JAR PARA O SPRING SECURITY -->
-
+ <dependency>
+		      <groupId>com.openshift</groupId>
+		      <artifactId>openshift-java-client</artifactId>
+		      <version>2.7.0.Final</version>
+		  </dependency>
 		<!-- JASPER -->
 		<dependency>
 			<groupId>net.sf.jasperreports</groupId>
